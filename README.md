@@ -23,3 +23,11 @@ entities/LerArquivos.java: Responsável por ler o arquivo externo contendo as pa
 * Scanner: Para capturar a entrada do usuário.
 * Random: Para selecionar uma palavra aleatória do arquivo de palavras.
 * Tratamento de Exceções: Para garantir que o jogo seja robusto e não quebre ao tentar ler um arquivo inexistente.
+
+### Quer testar?
+
+* Especifique o caminho do arquivo txt no codigo, lembrando que os nomes devem estar um abaixo do outro!
+
+
+
+![exemplo](https://github.com/user-attachments/assets/3c3338c9-16c1-44c2-8028-6ff6b6075377)
