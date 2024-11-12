@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\dougl\Projeto\ProjetoForca\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3413725848.index
+2204926899.index
