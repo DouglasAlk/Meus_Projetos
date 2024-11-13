@@ -11,8 +11,8 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_game")
-public class Games {
-    
+public class Game {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -21,116 +21,131 @@ public class Games {
 	@Column(name = "game_year")
 	private Integer year;
 	private String genre;
-	private String platform;
+	private String platforms;
+	private Double score;
 	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
+	
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	
 	
-	public Games(){
-		
+
+	public Game() {
+
 	}
 
+	
 
-	public Games(Long id, String title, Integer year, String genre, String platform, String imgUrl,
+	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
 			String shortDescription, String longDescription) {
-		
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.platform = platform;
+		this.platforms = platforms;
+		this.score = score;
 		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
 		this.longDescription = longDescription;
 	}
+
 
 
 	public Long getId() {
 		return id;
 	}
 
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
 
 	public String getTitle() {
 		return title;
 	}
 
-
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
 
 	public Integer getYear() {
 		return year;
 	}
 
-
 	public void setYear(Integer year) {
 		this.year = year;
 	}
-
 
 	public String getGenre() {
 		return genre;
 	}
 
-
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
 
-
 	public String getPlatform() {
-		return platform;
+		return platforms;
 	}
-
 
 	public void setPlatform(String platform) {
-		this.platform = platform;
+		this.platforms = platform;
 	}
-
 
 	public String getImgUrl() {
 		return imgUrl;
 	}
 
-
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
+
+	public String getPlatforms() {
+		return platforms;
+	}
+
+
+
+	public void setPlatforms(String platforms) {
+		this.platforms = platforms;
+	}
+
+
+
+	public Double getScore() {
+		return score;
+	}
+
+
+
+	public void setScore(Double score) {
+		this.score = score;
+	}
+
 
 
 	public String getShortDescription() {
 		return shortDescription;
 	}
 
-
 	public void setShortDescription(String shortDescription) {
 		this.shortDescription = shortDescription;
 	}
-
 
 	public String getLongDescription() {
 		return longDescription;
 	}
 
-
 	public void setLongDescription(String longDescription) {
 		this.longDescription = longDescription;
 	}
-
 
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -140,9 +155,8 @@ public class Games {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Games other = (Games) obj;
+		Game other = (Game) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
+
 }
